@@ -1,0 +1,16 @@
+<div class="static-scan-dashboard">
+  <table class="table">
+    <tr>
+      <th>Seal Id</th>
+      <th>High (NAI)</th>
+      <th>Medium (NAI)</th>
+      <th>Low (NAI)</th>
+    </tr>
+    <tr *ngFor="let scanResult of scanResults">
+      <td>{{scanResult.sealId}}</td>
+      <td>{{scanResult.high}} ({{scanResult.highNai}})</td>
+      <td>{{scanResult.medium}} ({{scanResult.mediumNai}})</td>
+      <td>{{scanResult.low}} ({{scanResult.lowNai}})</td>
+    </tr>
+  </table>
+</div>
