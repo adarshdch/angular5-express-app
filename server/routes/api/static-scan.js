@@ -11,4 +11,8 @@ router.get('/:sealId', function(req, res) {
   res.json(staticScanController.getBySealId(req.params.sealId));
 });
 
+
+
+
+
 module.exports = router;
