@@ -13,9 +13,18 @@ export class StaticScanDashboardComponent implements OnInit {
   constructor(private staticScanService: StaticScanService) { }
 
   ngOnInit() {
+    this.getScanResults();
     //this.itemCount = this.scanResults.length;
     this.staticScanService.scanResult.subscribe(res => this.scanResults = res);
-    this.staticScanService.changeScanResult(this.scanResults);
+    //this.staticScanService.changeScanResult(this.scanResults);
+    this.staticScanService.getScanResults();
+    console.log(this.scanResults);
+  }
+
+  getScanResults()
+  {
+    this.staticScanService.getScanResults()
+    .subscribe(results => this.scanResults = results);
   }
 
 }

@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-
-
+import { HttpClientModule } from '@angular/common/http';
 import { StaticScanService } from './services/static-scan.service';
 
 import { AppComponent } from './app.component';
@@ -20,6 +19,7 @@ import { AppSecurityDashboardComponent } from './components/app-security-dashboa
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AlertModule.forRoot(),
     TabsModule.forRoot()
   ],
